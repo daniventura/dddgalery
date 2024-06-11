@@ -1,0 +1,224 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #D1EAF9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: transform 1s ease;
+}
+
+.gachapon {
+    z-index: -99999999999999;
+    width: 300px;
+    height: 500px;
+    background-color: #DAE0D2;
+    border: 10px solid #333;
+    border-radius: 20px;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: flex-end; */
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.gachabody {
+    height: 45%;
+    aspect-ratio: 1;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    margin-left: 1rem;
+}
+.stripe {
+    background-color: #388192;
+    width: 100%;
+    height: 100%;
+    grid-row: 1 / span 3;
+    grid-column: 6 / span 3;
+    box-shadow: 0 1px 1px 2px #327381;
+
+}
+
+.wheel {
+    width: 100%;
+    height: 100%;
+    background-color: #388192;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 4 / span 3 ;
+    grid-column: 6 / span 3 ;
+    margin-top: -50%;
+    box-shadow: 0 3px 1px 2px #327381,
+                inset 0px 3px #3a8899;
+}
+
+#spinButton {
+    width: 80%;
+    height: 80%;
+    background-color: #d4d4d46b;
+    border: none;
+    border-radius: 50%;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.hole {
+    width: 100%;
+    height: 100%;
+    background-color: #c2c2c2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-row: 4 / span 3;
+    grid-column: 2 / span 3 ;
+    position: relative;
+    overflow: hidden;
+    box-shadow: #c2c2c2 0 3px 5px 2px;
+}
+
+.holein {
+    position: absolute;
+    border-radius: 50%;
+    width: 100%;
+    height: 80%;
+    top: 26%;
+    left: 0;
+    background: linear-gradient(to bottom, #c2c2c294, #7c7c7c);
+    background-color: #7c7c7c;
+}
+
+.gachabottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 8%;
+    background: linear-gradient(to bottom, hsl(85.71, 18.42%, 89.1%), #DAE0D2);
+    border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;
+}
+
+header {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    height: 40px;
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+}
+
+header ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    display: none;
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery img {
+    width: 30%;
+    margin: 1%;
+    border: 2px solid #333;
+}
+
+.glass  {
+    min-height: 50%;
+    overflow: hidden;
+    background-color: #f3f3f375;
+    background: linear-gradient(to bottom, #eeeeeec2, #f3f3f331, #bbbbbb85);
+    margin: 0 -20px;
+    border-radius: 10% / 30%;
+}
+
+.glass .grassy {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f3f3f375;
+    background: linear-gradient(to bottom, #e7e7e78a, #f3f3f331, #bbbbbb85);
+    margin: 0 0px;
+    border-radius: 10% / 30%;
+    backdrop-filter: blur(0.1px);
+}
+
+.sphere {
+    z-index: -10000;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--color) 50%, rgba(255, 255, 255, 0.5) 50%);
+}
+
+.poster {
+    z-index: -10;
+    position: absolute;
+    top: 0%;
+    left: 25%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgwrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.poster img {
+    border-radius: 10% / 30%;
+    transform: scale(1.2, 1);
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+    object-fit: cover; /* Esto asegura que la imagen mantenga su proporción */
+    position: absolute;
+}
