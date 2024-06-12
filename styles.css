@@ -258,7 +258,8 @@ nav ul li a {
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-bottom: 9rem;
+    padding: 9rem 0;
+
 }
 
 .banner .logo {
@@ -278,12 +279,14 @@ nav ul li a {
     font-weight: bolder;
     font-style:oblique;
     color: var(--orange);
-    letter-spacing: -12px;
+    letter-spacing: -6px;
     position: relative;
+    filter: drop-shadow(3px 3px 5px #6d6d6d);
     z-index: 20;
 }
 
-.banner h1::before {
+
+/* .banner h1::before {
     content: "Disfruta de artistas independientes y tu ludopatía";
     white-space: pre-wrap;
     font-size: clamp(2vw, 2vw, 3vw);
@@ -292,10 +295,13 @@ nav ul li a {
     font-style:oblique;
     color: var(--grey);
     position: absolute;
+    background-color: var(--blue);
+    border-radius: 12px;
     top: 85%;
     left: -70%;
     width: 200%;
-}
+    padding-left: 1rem;
+} */
 
 .banner h1::after {
     content: "gallery";
@@ -306,6 +312,17 @@ nav ul li a {
     left: 100;
     bottom: 50%;
     transform: translateY(100%);
+}
+h1 span:nth-child(3) {
+    font-family: 'Jacquard 12', cursive;
+}
+
+h1 span:nth-child(2) {
+    font-family: "Nabla", system-ui;
+}
+
+h1 span:nth-child(1) {
+    font-family: 'Jacquarda Bastarda 9 Charted', serif;
 }
 
 .gallery {
