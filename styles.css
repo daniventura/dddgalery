@@ -23,8 +23,8 @@ body, html {
 
 .gachapon {
     z-index: -99999999999999;
-    width: 300px;
-    height: 500px;
+    height: 80%;
+    aspect-ratio: 9 / 16;
     background-color: #DAE0D2;
     border: 10px solid #333;
     border-radius: 20px;
@@ -114,6 +114,69 @@ body, html {
     border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;
 }
 
+
+
+.glass  {
+    min-height: 50%;
+    overflow: hidden;
+    background-color: #f3f3f375;
+    background: linear-gradient(to bottom, #eeeeeec2, #f3f3f331, #bbbbbb85);
+    margin: 0 -20px;
+    border-radius: 10% / 30%;
+}
+
+.glass .grassy {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f3f3f375;
+    background: linear-gradient(to bottom, #e7e7e78a, #f3f3f331, #bbbbbb85);
+    margin: 0 0px;
+    border-radius: 10% / 30%;
+    backdrop-filter: blur(0.1px);
+}
+
+.sphere {
+    z-index: -10000;
+    position: absolute;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 50%;
+    background: linear-gradient(to right, var(--color) 50%, rgba(255, 255, 255, 0.5) 50%);
+}
+
+.poster {
+    z-index: -10;
+    position: absolute;
+    top: 0%;
+    left: 23%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgwrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.poster img {
+    border-radius: 10% / 30%;
+    transform: scale(1.2, 1);
+    margin: 0 auto;
+    width: auto;
+    height: 100%;
+    object-fit: cover; 
+    position: absolute;
+}
+
+
 header {
     width: 100%;
     background-color: #333;
@@ -150,75 +213,4 @@ header ul li a {
 main {
     display: none;
     padding: 20px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.gallery img {
-    width: 30%;
-    margin: 1%;
-    border: 2px solid #333;
-}
-
-.glass  {
-    min-height: 50%;
-    overflow: hidden;
-    background-color: #f3f3f375;
-    background: linear-gradient(to bottom, #eeeeeec2, #f3f3f331, #bbbbbb85);
-    margin: 0 -20px;
-    border-radius: 10% / 30%;
-}
-
-.glass .grassy {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #f3f3f375;
-    background: linear-gradient(to bottom, #e7e7e78a, #f3f3f331, #bbbbbb85);
-    margin: 0 0px;
-    border-radius: 10% / 30%;
-    backdrop-filter: blur(0.1px);
-}
-
-.sphere {
-    z-index: -10000;
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: linear-gradient(to right, var(--color) 50%, rgba(255, 255, 255, 0.5) 50%);
-}
-
-.poster {
-    z-index: -10;
-    position: absolute;
-    top: 0%;
-    left: 25%;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.imgwrapper {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    margin: 0 auto;
-}
-
-.poster img {
-    border-radius: 10% / 30%;
-    transform: scale(1.2, 1);
-    margin: 0 auto;
-    width: auto;
-    height: 100%;
-    object-fit: cover; /* Esto asegura que la imagen mantenga su proporción */
-    position: absolute;
 }
