@@ -346,7 +346,7 @@ h1 span:nth-child(1) {
     z-index: 20;
 }
 .gallery > .item:hover {
-    transform: rotate(3deg);
+    transform: rotate(1deg);
     scale: 0.95;
 }
 
